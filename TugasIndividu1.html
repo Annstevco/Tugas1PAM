@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body{
+            height: 280px;
+            width: 653px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+    <title>Tugas Minggu Pertama</title>
+</head>
+
+<body>
+    <table id ="datanilai" border="2.0" width ="350px">
+    <caption>Tabel Nilai Mahasiswa</caption>
+        <tr>
+            <th width="20px">NO</th>
+            <th width="100px">Nama</th>
+            <th width="100px">NIM</th>
+            <th width="100px">Nilai</th>
+            <th width="100px">Huruf Mutu</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Sehun</td>
+            <td>94</td>
+            <td>87</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Chanyeol</td>
+            <td>61</td>
+            <td>92</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Chen</td>
+            <td>21</td>
+            <td>85</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Baekhyun</td>
+            <td>04</td>
+            <td>20</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>Kyungsoo</td>
+            <td>12</td>
+            <td>90</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>6</td>
+            <td>Xiumin</td>
+            <td>99</td>
+            <td>67</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>7</td>
+            <td>Kai</td>
+            <td>88</td>
+            <td>56</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>8</td>
+            <td>Lay</td>
+            <td>77</td>
+            <td>99</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>9</td>
+            <td>Suh0</td>
+            <td>07</td>
+            <td>80</td>
+            <td></td>
+        </tr>
+        
+    </table>
+
+<script>
+    var table = document.getElementById("datanilai");
+    for(var i = 1; i < table.rows.length; i++){
+        if(table.rows[i].cells[3].innerHTML >= 80 ){
+            table.rows[i].cells[4].innerHTML = "A";
+        }
+        if(table.rows[i].cells[3].innerHTML >= 70 && table.rows[i].cells[3].innerHTML < 80  ){
+            table.rows[i].cells[4].innerHTML = "AB";
+        }
+        if(table.rows[i].cells[3].innerHTML >= 60 && table.rows[i].cells[3].innerHTML < 70  ){
+            table.rows[i].cells[4].innerHTML = "B";
+        }
+        if(table.rows[i].cells[3].innerHTML >= 50 && table.rows[i].cells[3].innerHTML < 60  ){
+            table.rows[i].cells[4].innerHTML = "BC";
+        }
+        if(table.rows[i].cells[3].innerHTML >= 40 && table.rows[i].cells[3].innerHTML < 50  ){
+            table.rows[i].cells[4].innerHTML = "C";
+        }
+        if(table.rows[i].cells[3].innerHTML >= 10 && table.rows[i].cells[3].innerHTML < 40  ){
+            table.rows[i].cells[4].innerHTML = "D";
+        }
+        if(table.rows[i].cells[3].innerHTML < 10 ){
+            table.rows[i].cells[4].innerHTML = "E";
+        }
+    }
+</script>
+</body>
+
+</html>
